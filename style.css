@@ -1,0 +1,68 @@
+.cascadia-code-<uniquifier> {
+  font-family: "Cascadia Code", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('background.svg');
+  background-repeat: repeat; /* Tiled background */
+  background-size: 300px;     /* Use original image size for tiling */
+  background-position: center;
+}
+
+.logo {
+  display: block;
+  max-width: 70vw;
+  max-height: 30vh;
+  width: auto;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Cascadia Code', monospace;
+  font-weight: 400;
+  color: #003a70;
+  font-size: 3rem;      /* Smaller by default */
+  text-align: center;
+  margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;  /* Even smaller on mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;  /* Slightly larger on big screens if needed */
+  }
+}
+
+.instagram-link {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.instagram-icon {
+  width: 50px;
+  height: 50px;
+  color: #E4405F;
+  transition: color 0.2s;
+}
+
+.instagram-link:hover .instagram-icon {
+  color: #C13584;
+}
