@@ -50,8 +50,10 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Lottie Player -->
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- Lottie Player (DotLottie format) -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- Fallback Lottie Player (JSON format) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -146,15 +148,16 @@
             <a href="#products" class="btn btn-primary">Explore Our Products</a>
           </div>
           <div class="hero-logo">
-            <dotlottie-player 
-              src="Lothanlogo.lottie" 
+            <!-- Using standard lottie-player which supports both .json and .lottie -->
+            <lottie-player 
+              src="./Lothanlogo.lottie" 
               background="transparent" 
               speed="1" 
-              style="width: 300px; height: 300px;" 
+              style="width: 300px; height: 300px; max-width: 100%;" 
               loop 
               autoplay
               aria-label="Lothan creative technology company animated logo">
-            </dotlottie-player>
+            </lottie-player>
           </div>
         </div>
       </div>
