@@ -80,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCenter = activeIndex * (cardWidth + gap) + (cardWidth / 2) + containerPadding;
         const offset = cardCenter - (viewportWidth / 2);
         
-        // Clamp the offset
-        const maxOffset = (totalCards * (cardWidth + gap)) - viewportWidth + containerPadding;
-        const clampedOffset = Math.max(0, Math.min(offset, maxOffset));
+        // Only clamp to prevent scrolling before first card (no max clamp)
+        const clampedOffset = Math.max(0, offset);
         
         sliderTrack.style.transform = `translateX(-${clampedOffset}px)`;
       } else {
