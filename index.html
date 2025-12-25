@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XYT38P4CT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-5XYT38P4CT');
-  </script>
-
   <!-- Essential Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,10 +37,17 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="LothanLogo.svg">
   
-  <!-- Fonts & Styles -->
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="LothanLogo.svg" as="image">
+  
+  <!-- Fonts - Non-render blocking with display=swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,400;0,600;0,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
   <!-- Structured Data (JSON-LD) -->
@@ -306,7 +303,26 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Main Script - Deferred -->
+  <script src="script.js" defer></script>
+  
+  <!-- Google Analytics - Delayed Load for Performance -->
+  <script>
+    // Load Google Analytics after page is interactive
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5XYT38P4CT';
+        document.head.appendChild(gtagScript);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5XYT38P4CT');
+      }, 2000); // Delay by 2 seconds
+    });
+  </script>
 </body>
 </html>
 

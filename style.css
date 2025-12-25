@@ -64,7 +64,7 @@ textarea:focus-visible {
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: 'Cascadia Code', monospace;
+  font-family: 'Cascadia Code', 'Consolas', 'Monaco', 'Courier New', monospace;
   background-image: url('background.svg');
   background-repeat: repeat;
   background-size: 300px;
