@@ -325,6 +325,13 @@ body {
   max-height: 400px;
 }
 
+/* Lottie Animation */
+.hero-animation {
+  width: 450px;
+  height: 450px;
+  max-width: 100%;
+}
+
 /* =====================
    Buttons
    ===================== */
@@ -930,6 +937,11 @@ body {
     max-width: 80%;
     width: auto;
     height: auto;
+  }
+
+  .hero-animation {
+    width: 250px;
+    height: 250px;
   }
 
   /* Products section mobile - Horizontal slider */

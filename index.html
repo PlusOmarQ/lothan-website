@@ -34,7 +34,7 @@
   <meta name="msapplication-TileColor" content="#003a70">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="LothanLogo.svg">
   
   <!-- Preload Critical Resources -->
@@ -48,12 +48,10 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"></noscript>
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
   
-  <!-- Lottie Player (DotLottie format) -->
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <!-- Fallback Lottie Player (JSON format) -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -148,16 +146,13 @@
             <a href="#products" class="btn btn-primary">Explore Our Products</a>
           </div>
           <div class="hero-logo">
-            <!-- Using standard lottie-player which supports both .json and .lottie -->
-            <lottie-player 
-              src="./Lothanlogo.lottie" 
-              background="transparent" 
-              speed="1" 
-              style="width: 300px; height: 300px; max-width: 100%;" 
-              loop 
-              autoplay
+            <dotlottie-wc 
+              src="https://lottie.host/4b33a0e0-e4bc-4b95-84bd-e9f27423e6ce/JAiw8IqN1d.lottie" 
+              class="hero-animation"
+              autoplay 
+              loop
               aria-label="Lothan creative technology company animated logo">
-            </lottie-player>
+            </dotlottie-wc>
           </div>
         </div>
       </div>
