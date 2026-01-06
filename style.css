@@ -648,6 +648,25 @@ body {
   gap: 16px;
 }
 
+.company-details {
+  font-family: 'Cascadia Code', monospace;
+  color: var(--color-primary);
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.company-details p {
+  margin: 0 0 12px 0;
+}
+
+.company-details p:last-child {
+  margin-bottom: 0;
+}
+
+.company-details strong {
+  font-weight: 600;
+}
+
 .social-link {
   display: flex;
   align-items: center;
