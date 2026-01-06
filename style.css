@@ -648,6 +648,12 @@ body {
   gap: 16px;
 }
 
+.info-divider {
+  height: 1px;
+  background: rgba(0, 58, 112, 0.12);
+  margin: 28px 0 22px 0;
+}
+
 .company-details {
   font-family: 'Cascadia Code', monospace;
   color: var(--color-primary);
